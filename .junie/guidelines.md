@@ -1,4 +1,6 @@
-# Rodzinny Planner - Inteligentna Lista Zadań dla Rodzin
+# Wytyczne dla Agenta - Rodzinny Planner
+
+To jest dokumentacja opisująca projekt dla agentów AI pracujących nad tym repozytorium.
 
 ## Cel projektu
 Stworzenie inteligentnej listy zadań (To-Do) zaprojektowanej dla rodzin i grup, która automatyzuje przypisywanie obowiązków na podstawie ról i integruje się z Kalendarzem Google.
@@ -16,50 +18,10 @@ Stworzenie inteligentnej listy zadań (To-Do) zaprojektowanej dla rodzin i grup,
 
 - **Frontend**: Angular (Signals, RxJS)
 - **Backend**: Firebase (Firestore, Auth, Functions, Storage)
-- **Jakość**: Testy Unit (Jest), E2E (Playwright), CI/CD (GitHub Actions)
+- **Jakość**: Testy Unit (Vitest), E2E (Playwright), CI/CD (GitHub Actions)
 
----
-
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory.
-
-## Running unit tests
-
-To execute unit tests with [Vitest](https://vitest.dev/), use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing with [Playwright](https://playwright.dev/), run:
-
-```bash
-ng e2e
-```
+## Instrukcje dla Agenta
+1.  **Zawsze przestrzegaj powyższego stacku technicznego.** Jeśli dodajesz nowe testy jednostkowe, używaj Vitest. Dla testów E2E używaj Playwrighta.
+2.  **Integracja AI**: Wszystkie funkcje związane z parsowaniem języka naturalnego powinny wykorzystywać Gemini.
+3.  **Firebase**: Dane powinny być przechowywane w Firestore, a pliki w Firebase Storage.
+4.  **Styl kodowania**: Używaj Angular Signals tam, gdzie to możliwe, zamiast tradycyjnych mechanizmów detekcji zmian lub nadmiernego użycia RxJS do prostego stanu.
